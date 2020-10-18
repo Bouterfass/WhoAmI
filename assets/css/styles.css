@@ -1,6 +1,13 @@
+html {
+    overflow: hidden;
+}
+
 body {
     background-color: #1a1a1a;
+    font-family: 'Josefin Sans', sans-serif;
 }
+
+
 
 .background-nav {
     background-color: #242328;
@@ -16,9 +23,46 @@ body {
 .download {
     background: none;
     outline: none;
-    
+    border: none;
     font-size: 20px;
     font-weight: bold;
     width: 280px;
     height: 90px;
+}
+
+.download:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: oldlace;
+}
+
+.line {
+    border-right: 2px solid  rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow : hidden; transform: translateY(-50%);
+}
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 2s steps(30) 1s 1 normal both,
+    BlinkTextCursor 500ms steps(40) infinite normal;
+}
+
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 14.5em;
+    }
+}
+
+@keyframes BlinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
